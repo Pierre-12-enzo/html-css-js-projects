@@ -60,7 +60,7 @@ a {
 }
 
 .box {
-    background: yellow;
+    background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTBwb3l3eHJscXdkYmpuZmVzejAzcXhiOWV1cmFiNWtzbnQ2YmFsZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rH0Rvox4pCpTG/giphy.gif');
     background-repeat: no-repeat;
     background-size: 500px 500px;
     position: relative;
