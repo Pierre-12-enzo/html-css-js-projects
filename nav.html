@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/bootstrap-icons.css">
+    <style>
+
+        body {
+    margin: 0;
+    background-color: #696866;
+    font-family: Poppins, sans-serif;
+    overflow-x: hidden;
+        }
+        .container {
+            background-color: #fff;
+            transform-origin: top left;
+            transition: transform 0.5s linear;
+            width: 100vw;
+            min-height: 100vh;
+            padding: 50px;
+
+        }
+        .container.show-nav {
+            transform: rotate(-20deg);
+        }
+        .circle-container {
+            position: fixed;
+            top: -100px;
+            left: -100px;
+        }
+        .circle {
+            background: #ff7979;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            position: relative;
+            transition: transform 0.5s linear;
+        }
+        .container.show-nav .circle {
+            transform: rotate(-70deg);
+        }
+
+        .circle button {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 200px;
+            background: transparent;
+            border: 0;
+            font-size: 26px;
+            color: #fff;
+        }
+
+        .circle button:focus {
+            outline: none;
+        }
+        .circle button#open {
+            left: 60%;
+            top: 50px;
+        }
+        .circle button#close {
+            top: 60%;
+            transform: rotate(90deg);
+            transform-origin: top left;
+        }
+        .container.show-nav + nav li {
+            transform: translateX(0);
+            transition-delay: 0.3s;
+        }
+        nav {
+            position: fixed;
+            bottom: 40px;
+            left: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style-type: none;
+            padding-left: 30px;
+        }
+        nav ul li {
+            text-transform: uppercase;
+            color: #fff;
+            margin: 40px 0;
+           transform: translateX(-100%);
+            transition: transform 0.4s ease-in;
+        }
+        nav ul li i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        nav ul li + li {
+            margin-left: 15px;
+            transform: translateX(-130%);
+        }
+        nav ul li + li + li {
+            margin-left: 30px;
+            transform: translateX(-150%);
+        }
+        img {
+            max-width: 100%;
+            height: 80vh;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+        .content h1 {
+            margin: 0;
+        }
+        .content small {
+            color: #555;
+            font-style: italic;
+        }
+        .content p {
+            color: #333;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="close"><i class="bi bi-times"></i></button>
+                <button id="open"><i class="bi bi-people"></i></button>
+            </div>
+        </div>
+    
+    <div class="content">
+        <h1>Amazing Article</h1>
+        <small>Florin Pop</small>
+        <ul><li><a href="./form.html">To Next</a></li></ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, libero officia dolorem velit dicta harum tenetur sapiente eum reprehenderit omnis at quos esse voluptatem nemo, nam expedita obcaecati. Repellat porro necessitatibus excepturi assumenda id delectus magnam aliquid optio, aut veniam facere commodi deserunt ratione temporibus eveniet sed. Dolorem eaque tempora ipsam consequatur quasi recusandae, corporis eligendi ab. Optio, suscipit nesciunt sit perspiciatis impedit quos quis, dolorum possimus itaque maxime, consectetur id quam dolores unde delectus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptatem cupiditate, doloremque ad officiis eveniet, expedita necessitatibus deserunt doloribus iste animi fugiat facilis saepe debitis! Voluptas quis modi voluptatem alias accusantium veniam recusandae optio facilis voluptatibus non culpa, veritatis suscipit nostrum est ea, id quo impedit dolorum, laboriosam tenetur assumenda.</p>
+   
+   <h3>My Picture</h3>
+   <img src="./images/R-Image_91.jpg" alt="">
+   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus magnam dolorem, porro, labore vel earum nostrum nihil et libero aperiam illum ut. Laboriosam facere repellat placeat recusandae dolor labore enim, debitis obcaecati voluptas assumenda! Voluptates dignissimos id praesentium incidunt autem. Nihil dolorum repudiandae ipsam quo libero ipsa eaque doloribus quidem sunt corporis debitis facilis voluptatem blanditiis magnam ex tempora laudantium, rerum cum dignissimos, quaerat molestiae iure ad porro? Deserunt sequi repudiandae quis quod recusandae illo.</p>
+    </div>
+    </div>
+    <nav>
+        <ul>
+            <li><i class="bi bi-house"></i>Home</li>
+            <li><i class="bi bi-user-alt"></i>About</li>
+            <li><i class="bi bi-envelope"></i>Contact</li>
+        </ul>
+    </nav>
+    <script src="./main.js"></script>
+</body>
+</html>
